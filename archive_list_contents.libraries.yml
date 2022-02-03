@@ -1,0 +1,20 @@
+archive_list_contents:
+  js:
+    js/archive_list_contents.js: {}
+  css:
+    component:
+      css/archive_list_contents.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+    - archive_list_contents/readmore
+
+readmore:
+  version: 2.2.1
+  license:
+    name: MIT
+    url: https://github.com/jedfoster/Readmore.js/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.1/readmore.min.js: {type: external, minified: true}

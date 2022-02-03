@@ -1,0 +1,4 @@
+/* workaround for jQuery bug in readmore.js v2 */
+.archivelist-readmore {
+  overflow: hidden;
+}

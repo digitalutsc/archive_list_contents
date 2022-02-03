@@ -1,0 +1,6 @@
+name: Archive List Contents
+type: module
+description: Field formatter that displays the contents of archive files in a list.
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9

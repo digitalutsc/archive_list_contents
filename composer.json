@@ -1,0 +1,6 @@
+{
+  "name": "drupal/archive_list_contents",
+  "type": "drupal-module",
+  "description": "Field formatter that displays the contents of archive files in a list.",
+  "keywords": ["Drupal"]
+}

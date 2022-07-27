@@ -14,7 +14,7 @@
     attach: function (context, settings) {
       once('archivelist-once', jQuery('.archivelist-readmore')).forEach(archive => {
         jQuery(archive).readmore({
-          moreLink: '<a href="#">...</a>',
+          moreLink: '<a href="#">Expand</a>',
           lessLink: '<a href="#">Close</a>',
           blockCSS: 'display: none; width: 100%;'
         });

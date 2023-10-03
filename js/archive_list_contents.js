@@ -16,7 +16,8 @@
         jQuery(archive).readmore({
           moreLink: '<a href="#">Expand</a>',
           lessLink: '<a href="#">Close</a>',
-          blockCSS: 'display: none; width: 100%;'
+          blockCSS: 'display: none; width: 100%;',
+          heightMargin: 120,
         });
       });
     }

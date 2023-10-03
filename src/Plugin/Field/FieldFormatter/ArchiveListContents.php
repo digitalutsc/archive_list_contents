@@ -81,7 +81,7 @@ class ArchiveListContents extends FileFormatterBase {
       $element[$delta]['archiveList'] = [
         '#type' => 'container',
         '#attributes' => [
-          'class' => $this->t('archivelist-readmore'),
+          'class' => 'archivelist-readmore',
         ],
       ];
       $element[$delta]['archiveList'][] = [

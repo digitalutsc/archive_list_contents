@@ -4,7 +4,6 @@ namespace Drupal\archive_list_contents\Plugin\Field\FieldFormatter;
 
 use Drupal\Core\Archiver\Zip;
 use Drupal\Core\Field\FieldItemListInterface;
-use Drupal\Component\Utility\Html;
 use Drupal\file\Plugin\Field\FieldFormatter\FileFormatterBase;
 use Drupal\Core\File\FileSystemInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -23,6 +22,8 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class ArchiveListContents extends FileFormatterBase {
 
   /**
+   * The file system service.
+   *
    * @var \Drupal\Core\File\FileSystem
    */
   protected $fileSystem;
@@ -65,7 +66,7 @@ class ArchiveListContents extends FileFormatterBase {
       $archive = new Zip($realpath);
       $fileList = $archive->listContents();
 
-      // download link
+      // Download link.
       $element[$delta][] = [
         '#theme' => 'file_link',
         '#file' => $file,
@@ -73,8 +74,9 @@ class ArchiveListContents extends FileFormatterBase {
           'tags' => $file->getCacheTags(),
         ],
       ];
-      // file size
+      // File size.
       $element[$delta][] = [
+        // phpcs:ignore -- Translatable strings must not begin or end with white spaces, use placeholders with t() for variables.
         '#markup' => $this->t('<i> - ' . $file->getSize() . ' bytes</i><br>'),
       ];
 
@@ -85,6 +87,7 @@ class ArchiveListContents extends FileFormatterBase {
         ],
       ];
       $element[$delta]['archiveList'][] = [
+        // phpcs:ignore -- Only string literals should be passed to t() where possible.
         '#markup' => $this->t(implode('<br>', $fileList)),
       ];
     }

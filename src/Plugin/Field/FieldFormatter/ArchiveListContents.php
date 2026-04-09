@@ -76,8 +76,9 @@ class ArchiveListContents extends FileFormatterBase {
       ];
       // File size.
       $element[$delta][] = [
-        // phpcs:ignore -- Translatable strings must not begin or end with white spaces, use placeholders with t() for variables.
-        '#markup' => $this->t('<i> - ' . $file->getSize() . ' bytes</i><br>'),
+        '#markup' => $this->t('<i> - @size bytes</i><br>', [
+          '@size' => $file->getSize(),
+        ]),
       ];
 
       $element[$delta]['archiveList'] = [
@@ -87,8 +88,7 @@ class ArchiveListContents extends FileFormatterBase {
         ],
       ];
       $element[$delta]['archiveList'][] = [
-        // phpcs:ignore -- Only string literals should be passed to t() where possible.
-        '#markup' => $this->t(implode('<br>', $fileList)),
+        '#markup' => implode('<br>', $fileList),
       ];
     }
 

@@ -88,7 +88,8 @@ class ArchiveListContents extends FileFormatterBase {
         ],
       ];
       $element[$delta]['archiveList'][] = [
-        '#markup' => implode('<br>', $fileList),
+        // phpcs:ignore -- Only string literals should be passed to t() where possible.
+        '#markup' => $this->t(implode('<br>', $fileList)),
       ];
     }
 
